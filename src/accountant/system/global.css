@@ -1,0 +1,42 @@
+/*
+ * Empty Stylesheet file.
+ */
+
+.primary-gradient {
+    -fx-background-color: linear-gradient(to bottom right, #00B9FF, #006BDB);
+}
+
+.btn-primary {
+    -fx-background-color: linear-gradient(to bottom right, #00B9FF, #006BDB);
+    -fx-background-radius: 5px;
+    -fx-cursor: hand;
+    -fx-text-fill: #fff;
+    -fx-font-size: 14px;
+}
+.btn-primary:hover {
+    -fx-background-color: linear-gradient(to bottom right, #47C6F7, #408CDB);
+}
+
+.textfield {
+    -fx-background-color: white;
+    -fx-border-color: #f1f5f8;
+    -fx-border-width: .5px;
+}
+
+.textfield:focused {
+    -fx-border-width: 1px;
+}
+
+.side-link:hover {
+    -fx-background-color: #0009ff;
+    -fx-cursor: hand;
+}
+
+.selected-button {
+    -fx-background-color: #0009ff;
+}
+
+.logout:hover {
+    -fx-background-color: #ff0000;
+    -fx-cursor: hand;
+}

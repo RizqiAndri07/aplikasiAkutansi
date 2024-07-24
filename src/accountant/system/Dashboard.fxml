@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import de.jensd.fx.glyphs.fontawesome.FontAwesomeIcon?>
+<?import javafx.scene.Group?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.shape.Circle?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane fx:id="anchorPane" prefHeight="400.0" prefWidth="800.0" xmlns="http://javafx.com/javafx/22" xmlns:fx="http://javafx.com/fxml/1" fx:controller="accountant.system.DashboardController"> 
+    <children>
+        <fx:include fx:id="layout" source="Layout.fxml" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0" />
+        <AnchorPane layoutX="180.0" layoutY="4.0" prefHeight="400.0" prefWidth="620.0" style="-fx-background-color: #fff;" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="180.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+            <children>
+                <Group layoutX="586.0" layoutY="26.0" AnchorPane.rightAnchor="21.0" AnchorPane.topAnchor="14.0">
+                    <children>
+                        <Circle layoutY="1.0" radius="13.0" stroke="BLACK" strokeType="INSIDE" />
+                        <FontAwesomeIcon fill="WHITE" glyphName="BELL" layoutX="-7.0" layoutY="6.0" size="1.2em" text="">
+                            <font>
+                                <Font size="10.0" />
+                            </font>
+                        </FontAwesomeIcon>
+                    </children>
+                </Group>
+                <Label alignment="CENTER" layoutX="168.0" layoutY="183.0" text="Welcome to Dashboard" AnchorPane.bottomAnchor="182.0" AnchorPane.leftAnchor="168.0" AnchorPane.rightAnchor="167.0" AnchorPane.topAnchor="183.0">
+                    <font>
+                        <Font name="System Bold" size="24.0" />
+                    </font>
+                </Label>
+            </children>
+        </AnchorPane>
+    </children>
+</AnchorPane>

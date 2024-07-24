@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import de.jensd.fx.glyphs.fontawesome.FontAwesomeIcon?>
+<?import javafx.scene.Group?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.shape.Circle?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane id="AnchorPane" fx:id="anchorLayout" prefHeight="400.0" prefWidth="800.0" stylesheets="@global.css" xmlns="http://javafx.com/javafx/22" xmlns:fx="http://javafx.com/fxml/1" fx:controller="accountant.system.LayoutController">
+    <children>
+        <AnchorPane prefHeight="400.0" prefWidth="180.0" style="-fx-background-color: #000256;" styleClass="side-bg-color" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.topAnchor="0.0">
+            <children>
+                <JFXButton fx:id="jurnal" buttonType="RAISED" layoutX="13.0" prefHeight="40.0" prefWidth="154.0" styleClass="side-link" stylesheets="@global.css" text="Jurnal" textFill="WHITE" AnchorPane.leftAnchor="13.0" AnchorPane.rightAnchor="13.0" AnchorPane.topAnchor="160.0">
+                    <graphic>
+                        <FontAwesomeIcon fill="WHITE" glyphName="LIST" />
+                    </graphic>
+                </JFXButton>
+                <JFXButton fx:id="bukuBesar" buttonType="RAISED" layoutX="13.0" prefHeight="40.0" prefWidth="154.0" styleClass="side-link" text="Buku Besar" textFill="WHITE" AnchorPane.leftAnchor="13.0" AnchorPane.rightAnchor="13.0" AnchorPane.topAnchor="205.0">
+                    <graphic>
+                        <FontAwesomeIcon fill="WHITE" glyphName="BOOK" />
+                    </graphic>
+                </JFXButton>
+                <JFXButton fx:id="neraca" buttonType="RAISED" layoutX="13.0" prefHeight="40.0" prefWidth="154.0" styleClass="side-link" text="Neraca" textFill="WHITE" AnchorPane.leftAnchor="13.0" AnchorPane.rightAnchor="13.0" AnchorPane.topAnchor="250.0">
+                    <graphic>
+                        <FontAwesomeIcon fill="WHITE" />
+                    </graphic>
+                </JFXButton>
+                <JFXButton fx:id="lapLabaRugi" buttonType="RAISED" layoutX="13.0" prefHeight="40.0" prefWidth="154.0" styleClass="side-link" text="Lap. Laba Rugi" textFill="WHITE" AnchorPane.leftAnchor="13.0" AnchorPane.rightAnchor="13.0" AnchorPane.topAnchor="295.0">
+                    <graphic>
+                        <FontAwesomeIcon fill="WHITE" />
+                    </graphic>
+                </JFXButton>
+                <JFXButton fx:id="logOut" buttonType="RAISED" layoutX="13.0" layoutY="346.0" prefHeight="40.0" prefWidth="154.0" styleClass="logout" text="Logout" textFill="WHITE" AnchorPane.bottomAnchor="13.0" AnchorPane.leftAnchor="13.0" AnchorPane.rightAnchor="13.0">
+                    <graphic>
+                        <FontAwesomeIcon fill="WHITE" />
+                    </graphic>
+                </JFXButton>
+                <ImageView fitHeight="150.0" fitWidth="150.0" layoutX="15.0" pickOnBounds="true" preserveRatio="true">
+                    <image>
+                        <Image url="@../img/AccountingLogo.png" />
+                    </image>
+                </ImageView>
+            </children>
+        </AnchorPane>
+        <AnchorPane layoutX="180.0" layoutY="4.0" prefHeight="400.0" prefWidth="620.0" style="-fx-background-color: #fff;" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="180.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+            <children>
+                <Group layoutX="586.0" layoutY="26.0" AnchorPane.rightAnchor="21.0" AnchorPane.topAnchor="14.0">
+                    <children>
+                        <Circle layoutY="1.0" radius="13.0" stroke="BLACK" strokeType="INSIDE" />
+                        <FontAwesomeIcon fill="WHITE" glyphName="BELL" layoutX="-7.0" layoutY="6.0" size="1.2em" text="">
+                            <font>
+                                <Font size="10.0" />
+                            </font>
+                        </FontAwesomeIcon>
+                    </children>
+                </Group>
+            </children>
+        </AnchorPane>
+    </children>
+</AnchorPane>

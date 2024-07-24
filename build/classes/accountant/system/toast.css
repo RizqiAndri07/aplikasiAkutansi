@@ -1,0 +1,66 @@
+/*
+Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
+Click nbfs://nbhost/SystemFileSystem/Templates/Other/CascadeStyleSheet.css to edit this template
+*/
+
+.toast {
+    -fx-background-color: #333;
+    -fx-text-fill: white;
+    -fx-padding: 10px;
+    -fx-border-radius: 5px;
+    -fx-background-radius: 5px;
+    -fx-font-size: 14px;
+    -fx-effect: dropshadow(gaussian, rgba(0,0,0,0.75), 10, 0, 0, 0);
+}
+
+.toast.success {
+    -fx-background-color: #4CAF50;
+}
+
+.toast.error {
+    -fx-background-color: #f44336;
+}
+
+.toast.info {
+    -fx-background-color: #808080;
+}
+
+.toast-title {
+    -fx-background-color: #000256;  /* Warna latar belakang biru */
+    -fx-font-size: 14px;
+    -fx-font-weight: bold;
+    -fx-text-fill: white;
+    -fx-padding: 5px;
+    -fx-background-radius: 5px 5px 0 0; /* Sudut atas membulat */
+    -fx-alignment: center-left;  /* Menyelaraskan teks ke kiri */
+}
+
+.toast-content {
+    -fx-font-size: 14px;
+    -fx-text-fill: black;
+    -fx-padding: 10px;
+    -fx-alignment: center-left;  /* Menyelaraskan teks ke kiri */
+}
+
+.toast-button {
+    -fx-padding: 5px 10px;
+    -fx-font-size: 14px;
+    -fx-background-color: #007bff;
+    -fx-text-fill: white;
+    -fx-background-radius: 5px;
+    -fx-border-radius: 5px;
+    -fx-cursor: hand;
+}
+
+.toast-button:hover {
+    -fx-background-color: #0056b3;
+}
+
+.toast-cancel-button {
+    -fx-background-color: #6c757d;
+}
+
+.toast-cancel-button:hover {
+    -fx-background-color: #5a6268;
+}
+

@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.PasswordField?>
+<?import javafx.scene.control.ProgressIndicator?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.StackPane?>
+<?import javafx.scene.text.Font?>
+
+<StackPane fx:id="pane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" stylesheets="@form.css" xmlns="http://javafx.com/javafx/22" xmlns:fx="http://javafx.com/fxml/1" fx:controller="accountant.system.LoginController">
+   <children>
+      <AnchorPane prefHeight="191.0" prefWidth="600.0">
+         <children>
+            <AnchorPane prefHeight="400.0" prefWidth="308.0" styleClass="primary-gradient" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.topAnchor="0.0">
+               <children>
+                  <ImageView fitHeight="309.0" fitWidth="308.0" layoutY="46.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../img/Accountinglogo.png" />
+                     </image>
+                  </ImageView>
+               </children>
+            </AnchorPane>
+            <AnchorPane layoutX="306.0" prefHeight="400.0" prefWidth="294.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="306.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+               <children>
+                  <Label layoutX="118.0" layoutY="47.0" text="Login" AnchorPane.leftAnchor="118.0">
+                     <font>
+                        <Font size="26.0" />
+                     </font>
+                  </Label>
+                  <TextField fx:id="emailField" layoutX="34.0" layoutY="130.0" prefHeight="39.0" prefWidth="226.0" promptText="Username or Email" styleClass="textfield" AnchorPane.leftAnchor="35.0" />
+                  <PasswordField fx:id="passwordField" layoutX="35.0" layoutY="178.0" prefHeight="39.0" prefWidth="226.0" promptText="Password" styleClass="textfield" AnchorPane.leftAnchor="35.0" />
+                  <Label fx:id="forgotPasswordLabel" layoutX="154.0" layoutY="227.0" styleClass="label-link" text="Forgot password?" textFill="#42a7ff" AnchorPane.leftAnchor="154.0">
+                     <font>
+                        <Font size="13.0" />
+                     </font>
+                  </Label>
+                  <Button fx:id="loginButton" layoutX="34.0" layoutY="257.0" mnemonicParsing="false" prefHeight="38.0" prefWidth="226.0" styleClass="btn-primary" text="Login" AnchorPane.leftAnchor="35.0" />
+                  <Label layoutX="39.0" layoutY="366.0" text="Don't have an account? " AnchorPane.leftAnchor="39.0">
+                     <font>
+                        <Font size="13.0" />
+                     </font>
+                  </Label>
+                  <Label fx:id="registerLabel" layoutX="177.0" layoutY="366.0" styleClass="label-link" text="Register here" textFill="#42a7ff" AnchorPane.leftAnchor="177.0">
+                     <font>
+                        <Font size="13.0" />
+                     </font>
+                  </Label>
+                  <ProgressIndicator fx:id="progressIndicator" layoutX="132.0" layoutY="325.0" prefHeight="32.0" prefWidth="32.0" visible="false" />
+               </children>
+            </AnchorPane>
+         </children>
+      </AnchorPane>
+   </children>
+</StackPane>
