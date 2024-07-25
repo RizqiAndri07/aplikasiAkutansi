@@ -10,24 +10,32 @@ package accountant.system;
  */
 public class neraca {
     private int id;
-    private String namaPerusahaan;
+    private final String labelAktifaLancar;
+    private final int valueAktifaLancar;
+    private final String labelAktifaTetap;
+    private final int valueAktifaTetap;
     
-    public neraca (String namaPersuahaan){
-        this.namaPerusahaan = namaPerusahaan;
+    public neraca (String labelAktifaLancar,int valueAktifaLancar,String labelAktifaTetap,int valueAktifaTetap){
+        this.labelAktifaLancar = labelAktifaLancar;
+        this.valueAktifaLancar = valueAktifaLancar;
+        this.labelAktifaTetap = labelAktifaTetap;
+        this.valueAktifaTetap = valueAktifaTetap;
     }
     public int getId(){
         return id;
     }
     
-    public void setId(){
-        this.id = id;
+    public String getLabelAktifaLancar(){
+        return labelAktifaLancar;
     }
-    public String getPerusahaan(){
-        return namaPerusahaan;
+    public int getValueAktifaLancar(){
+        return valueAktifaLancar;
     }
-    
-    public void  setPerusahaan(){
-        this.namaPerusahaan = namaPerusahaan;
+    public String getLabelAktifaTetap(){
+        return labelAktifaTetap;
+    }
+    public int getvalueAktifaTetap(){
+        return valueAktifaTetap;
     }
     
    
