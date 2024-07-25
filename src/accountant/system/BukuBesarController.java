@@ -69,7 +69,7 @@ public class BukuBesarController implements Initializable {
             System.out.println("Error loading accounts: " + e.getMessage());
         }
 
-        filterBukuBesar.setItems(akunList);
+        filterBukuBesar.setItems(akunList); 
         filterBukuBesar.setValue(akunList.get(0));
     }
 
