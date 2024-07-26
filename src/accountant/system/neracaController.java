@@ -45,13 +45,13 @@ public class neracaController {
         tahun.setItems(FXCollections.observableArrayList(tahunList));
         tahun.getSelectionModel().selectFirst();
 
-        loadGridData(containerAsetTetap, 2);
-        loadGridData(containerAsetLancar, 1);
+        loadGridData(containerAsetTetap, 2,  "Total Aktiva Tetap");
+        loadGridData(containerAsetLancar, 1, "Total Aktiva Lancar");
     }
 
-    private void loadGridData(GridPane container, int akunId) {
+    private void loadGridData(GridPane container, int akunId, String totalLabel) {
         String query = """
-                       SELECT buku_besar.deskripsi, buku_besar.saldo
+                       SELECT *
                        FROM buku_besar 
                        JOIN akun_3 ON buku_besar.akun_id = akun_3.id 
                        WHERE akun_3.id_akun2 = ?;""";
@@ -72,10 +72,12 @@ public class neracaController {
             while (rs.next()) {
                 dataFound = true;
                 String deskripsi = rs.getString("deskripsi");
-                double saldo = rs.getDouble("saldo");
-                totalSaldo += saldo;
+                double debit = rs.getDouble("debit");
+                double kredit = rs.getDouble("kredit");
+                double nilai = (debit == 0) ? kredit : debit;
+                totalSaldo += nilai;
 
-                String formattedSaldo = decimalFormat.format(saldo);
+                String formattedSaldo = decimalFormat.format(nilai);
 
                 Label deskripsiLabel = new Label(deskripsi);
                 deskripsiLabel.setFont(new Font(10));
@@ -100,7 +102,7 @@ public class neracaController {
 
                 // Add total labels row
                 int totalRowIndex = lineRowIndex + 1;
-                addTotalLabels(container, totalSaldo, decimalFormat, totalRowIndex);
+                addTotalLabels(container, totalSaldo, decimalFormat, totalRowIndex, totalLabel);
             }
 
         } catch (Exception e) {
@@ -124,8 +126,8 @@ public class neracaController {
         addRowConstraints(container);
     }
 
-    private void addTotalLabels(GridPane container, double totalSaldo, DecimalFormat decimalFormat, int rowIndex) {
-        Label totalLabel = new Label("TOTAL AKTIVA TETAP");
+    private void addTotalLabels(GridPane container, double totalSaldo, DecimalFormat decimalFormat, int rowIndex, String totalLabelText) {
+        Label totalLabel = new Label(totalLabelText);
         totalLabel.setFont(Font.font("System", FontWeight.BOLD, 10));
         GridPane.setMargin(totalLabel, new Insets(10, 0, 10, 10));
         container.add(totalLabel, 0, rowIndex);
@@ -134,7 +136,7 @@ public class neracaController {
         Label totalSaldoLabel = new Label(formattedTotalSaldo);
         totalSaldoLabel.setFont(Font.font("System", FontWeight.BOLD, 10));
         GridPane.setMargin(totalSaldoLabel, new Insets(10, 0, 10, 10));
-        container.add(totalSaldoLabel, 2, rowIndex);
+        container.add(totalSaldoLabel, 1, rowIndex);
 
         addRowConstraints(container);
     }
