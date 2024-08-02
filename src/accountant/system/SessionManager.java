@@ -24,7 +24,7 @@ public class SessionManager {
         }
         return instance;
     }
-
+    
     public boolean isLoggedIn() {
         return loggedIn;
     }

@@ -1,0 +1,19 @@
+peralatan kantor:(122)
+akun penyusutan:(620)
+kendaraan (600)
+akun penyusutan peralatan:(123)
+
+kas (111)
+Bank (212)
+piutang usaha (211)
+ppn masukkan (800)
+persediaan barang dagang(115)
+perlengkapan kantor (113)
+
+hutang usaha (211)
+PPN keluaran (610)
+
+Modal (300)
+Laba ditahan (401)
+Laba Tahun Berjalan (400)
+
