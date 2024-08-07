@@ -414,15 +414,15 @@
                   </GridPane>
                </children>
             </GridPane>
-            <Label fx:id="filterTahun" layoutX="296.0" layoutY="30.0" prefHeight="15.0" prefWidth="22.0">
+            <Label fx:id="filterTahun" alignment="CENTER" layoutX="271.0" layoutY="30.0" prefHeight="15.0" prefWidth="73.0" text="2024">
                <font>
                   <Font name="System Bold" size="10.0" />
                </font>
             </Label>
-            <Label fx:id="namaPerusahaan" layoutX="306.0" layoutY="1.0" />
+            <Label fx:id="namaPerusahaan" alignment="CENTER" layoutX="221.0" layoutY="1.0" prefHeight="17.0" prefWidth="171.0" styleClass="centerLabel" stylesheets="@global.css" />
          </children>
       </AnchorPane>
       <ComboBox fx:id="tahun" layoutX="190.0" layoutY="18.0" onAction="#select" prefHeight="1.0" prefWidth="73.0" />
-      <Button fx:id="download" layoutX="275.0" layoutY="18.0" mnemonicParsing="false" onAction="#handleDownload" text="Download" />
+      <Button layoutX="275.0" layoutY="18.0" mnemonicParsing="false" onAction="#handleDownload" text="Download" />
    </children>
 </AnchorPane>

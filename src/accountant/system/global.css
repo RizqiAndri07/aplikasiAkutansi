@@ -40,3 +40,9 @@
     -fx-background-color: #ff0000;
     -fx-cursor: hand;
 }
+
+.centerLabel {
+    -fx-font-weight: bold; /* Mengatur teks menjadi tebal */
+    -fx-text-fill: black; /* Mengatur warna teks (opsional) */
+    -fx-text-transform: uppercase; /* Mengatur teks menjadi huruf besar */
+}
