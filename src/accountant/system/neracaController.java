@@ -39,15 +39,16 @@ public class neracaController {
     private final Map<Integer, Label> labelMap = new HashMap<>();
 
     @FXML
-    private void initialize() {
-        initializeTahunComboBox();
-        initializeLabelMap();
-        try {
-            loadData();
-        } catch (SQLException ex) {
-            Logger.getLogger(neracaController.class.getName()).log(Level.SEVERE, null, ex);
-        }
+private void initialize() {
+    initializeTahunComboBox();
+    initializeLabelMap();
+    int currentYear = LocalDate.now().getYear();
+    try {
+        loadData(currentYear);
+    } catch (SQLException ex) {
+        Logger.getLogger(neracaController.class.getName()).log(Level.SEVERE, null, ex);
     }
+}
 
     private void initializeTahunComboBox() {
         int currentYear = LocalDate.now().getYear();
@@ -82,25 +83,27 @@ public class neracaController {
         labelMap.put(400, e_400);
     }
 
-    private void loadData() throws SQLException {
-        String akunQuery = """
-                SELECT akun_id, debit, kredit 
-                FROM buku_besar
-                WHERE akun_id IN (122, 620, 600, 123, 111, 212, 211, 800, 115, 113, 621, 610, 300, 401, 400)
-                AND user_id = ?
-                """;
-        String companyQuery = "SELECT nama_perusahaan FROM user WHERE id = ?";
-        DecimalFormat decimalFormat = new DecimalFormat("#,###");
+   private void loadData(int selectedYear) throws SQLException {
+    resetLabelsToZero(); // Reset labels to zero before loading new data
 
-        try (Connection conn = Database.connect();
-             PreparedStatement companyStmt = conn.prepareStatement(companyQuery);
-             PreparedStatement akunStmt = conn.prepareStatement(akunQuery)) {
+    String akunQuery = """
+            SELECT akun_id, debit, kredit 
+            FROM buku_besar
+            WHERE akun_id IN (122, 620, 600, 123, 111, 212, 211, 800, 115, 113, 621, 610, 300, 401, 400)
+            AND user_id = ? AND SUBSTRING(tanggal, 7, 4) = ?
+            """;
+    String companyQuery = "SELECT nama_perusahaan FROM user WHERE id = ?";
+    DecimalFormat decimalFormat = new DecimalFormat("#,###");
 
-            loadCompanyName(companyStmt);
-            loadAccountData(akunStmt, decimalFormat);
-            calculateTotals(decimalFormat);
-        }
+    try (Connection conn = Database.connect();
+         PreparedStatement companyStmt = conn.prepareStatement(companyQuery);
+         PreparedStatement akunStmt = conn.prepareStatement(akunQuery)) {
+
+        loadCompanyName(companyStmt);
+        loadAccountData(akunStmt, decimalFormat, selectedYear);
+        calculateTotals(decimalFormat);
     }
+}
 
     private void loadCompanyName(PreparedStatement stmt) throws SQLException {
         stmt.setInt(1, sessionManager.getCurrentUserId());
@@ -109,24 +112,42 @@ public class neracaController {
         }
     }
 
-    private void loadAccountData(PreparedStatement stmt, DecimalFormat decimalFormat) throws SQLException {
-        stmt.setInt(1, sessionManager.getCurrentUserId());
-        try (ResultSet rs = stmt.executeQuery()) {
-            rawValues.clear();
-            while (rs.next()) {
-                int akunId = rs.getInt("akun_id");
-                double nilai = rs.getDouble("debit") - rs.getDouble("kredit");
-                rawValues.merge(akunId, nilai, Double::sum);
-            }
+    private void loadAccountData(PreparedStatement stmt, DecimalFormat decimalFormat, int selectedYear) throws SQLException {
+    stmt.setInt(1, sessionManager.getCurrentUserId());
+    stmt.setString(2, String.valueOf(selectedYear));
+    try (ResultSet rs = stmt.executeQuery()) {
+        rawValues.clear();
+        boolean dataFound = false;
+        while (rs.next()) {
+            dataFound = true;
+            int akunId = rs.getInt("akun_id");
+            double nilai = rs.getDouble("debit") - rs.getDouble("kredit");
+            rawValues.merge(akunId, nilai, Double::sum);
+        }
+        if (dataFound) {
             rawValues.forEach((akunId, nilai) -> {
                 Label label = labelMap.get(akunId);
                 if (label != null) {
                     label.setText(decimalFormat.format(nilai));
                 }
             });
+        } else {
+            System.out.println("No data found for year: " + selectedYear);
         }
     }
+}
 
+    private void resetLabelsToZero() {
+    DecimalFormat decimalFormat = new DecimalFormat("#,###");
+    labelMap.values().forEach(label -> label.setText(decimalFormat.format(0)));
+    at_total.setText(decimalFormat.format(0));
+    al_total.setText(decimalFormat.format(0));
+    total_asset.setText(decimalFormat.format(0));
+    kjp_total.setText(decimalFormat.format(0));
+    e_total.setText(decimalFormat.format(0));
+    total_le.setText(decimalFormat.format(0));
+}
+    
     private void calculateTotals(DecimalFormat decimalFormat) {
         double atTotal = sumRawValues(122, 620, 600, 123);
         double alTotal = sumRawValues(111, 212, 211, 800, 115, 113);
@@ -145,15 +166,20 @@ public class neracaController {
         return Arrays.stream(akunIds).mapToDouble(id -> rawValues.getOrDefault(id, 0.0)).sum();
     }
 
-    @FXML
-    private void select() {
-        Integer selectedTahun = tahun.getValue();
-        if (selectedTahun != null) {
-            filterTahun.setText(selectedTahun.toString());
-            System.out.println("Selected Year: " + selectedTahun);
-            // Additional logic to filter data based on the selected year
+  @FXML
+private void select() {
+    Integer selectedYear = tahun.getValue();
+    if (selectedYear != null) {
+        filterTahun.setText(selectedYear.toString());
+        System.out.println("Selected Year: " + selectedYear);
+        try {
+            loadData(selectedYear);
+        } catch (SQLException ex) {
+            Logger.getLogger(neracaController.class.getName()).log(Level.SEVERE, null, ex);
+            resetLabelsToZero(); // Reset labels if an error occurs
         }
     }
+}
 
     @FXML
     private void handleDownload() {
