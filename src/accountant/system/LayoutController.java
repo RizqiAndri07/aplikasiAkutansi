@@ -47,8 +47,8 @@ public class LayoutController implements Initializable {
             // Set event handler untuk setiap tombol navigasi
             jurnal.setOnMouseClicked(event -> handleNavigation("Jurnal.fxml", jurnal));
             bukuBesar.setOnMouseClicked(event -> handleNavigation("BukuBesar.fxml", bukuBesar));
-            neraca.setOnMouseClicked(event -> switchScene("neraca.fxml"));
-            lapLabaRugi.setOnMouseClicked(event -> handleNavigation("LapLabaRugi.fxml", lapLabaRugi));
+            neraca.setOnMouseClicked(event -> handleNavigation("neraca.fxml", neraca));
+            lapLabaRugi.setOnMouseClicked(event -> switchScene("LapLabaRugi.fxml"));
             logOut.setOnMouseClicked(event -> handleLogout());
         });
     }
@@ -63,14 +63,13 @@ public class LayoutController implements Initializable {
             boolean isMaximized = mainStage.isMaximized();
             double width = mainStage.getWidth();
             double height = mainStage.getHeight();
-            
+
             // Set ukuran minimum
-            mainStage.setMinWidth(820);
-            mainStage.setMinHeight(430);
+            mainStage.setMinWidth(850);
+            mainStage.setMinHeight(450);
 
             // Pusatkan mainStage di layar
-            mainStage.centerOnScreen();
-
+//            mainStage.centerOnScreen();
             // Set scene baru
             mainStage.setResizable(true);
             mainStage.setScene(scene);
@@ -82,7 +81,7 @@ public class LayoutController implements Initializable {
                 mainStage.setWidth(width);
                 mainStage.setHeight(height);
             }
-            
+
             // Update tombol aktif
             setActiveButton(button);
         } catch (IOException e) {
@@ -96,14 +95,18 @@ public class LayoutController implements Initializable {
             Parent root = loader.load();
             Scene scene = new Scene(root);
 
+            // Nonaktifkan kemampuan untuk maximize
+//            mainStage.setResizable(false);
+            mainStage.setMaximized(false);
+            
             // Atur scene baru
             mainStage.setScene(scene);
 
             // Perbarui ukuran mainStage sesuai dengan ukuran root dari resource yang dimuat
             mainStage.sizeToScene();
 
-            // Nonaktifkan kemampuan untuk maximize
-            mainStage.setResizable(false);
+            mainStage.setMinHeight(mainStage.getHeight());
+            mainStage.setMinWidth(mainStage.getWidth());
 
             // Pusatkan mainStage di layar
             mainStage.centerOnScreen();
@@ -126,6 +129,7 @@ public class LayoutController implements Initializable {
             // Atur scene baru tanpa memasukkan login ke dalam main stage
             Stage loginStage = new Stage();
             loginStage.setScene(scene);
+            loginStage.setResizable(false);
             loginStage.show();
 
             // Tutup main stage (jika diperlukan)

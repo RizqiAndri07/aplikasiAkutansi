@@ -14,30 +14,20 @@
 <AnchorPane id="AnchorPane" prefHeight="400.0" prefWidth="800.0" xmlns="http://javafx.com/javafx/22" xmlns:fx="http://javafx.com/fxml/1" fx:controller="accountant.system.neracaController">
    <children>
        <fx:include fx:id="layout" source="Layout.fxml" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0" />
-      <AnchorPane fx:id="containerNeraca" layoutX="184.0" layoutY="46.0" prefHeight="363.0" prefWidth="615.0">
+      <AnchorPane fx:id="containerNeraca" layoutX="184.0" layoutY="56.0" prefHeight="400.0" prefWidth="600.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="177.0" AnchorPane.rightAnchor="1.0" AnchorPane.topAnchor="56.0">
          <children>
-            <Label layoutX="283.0" layoutY="17.0" text="NERACA">
+            <Label layoutX="14.0" layoutY="29.0" text="Asset" AnchorPane.leftAnchor="10.0">
                <font>
                   <Font name="System Bold" size="12.0" />
                </font>
             </Label>
-            <Label layoutX="14.0" layoutY="29.0" text="Asset">
-               <font>
-                  <Font name="System Bold" size="12.0" />
-               </font>
-            </Label>
-            <Label layoutX="495.0" layoutY="29.0" text="Liabilities &amp; Equity">
-               <font>
-                  <Font name="System Bold" size="12.0" />
-               </font>
-            </Label>
-            <GridPane layoutY="50.0" prefHeight="317.0" prefWidth="615.0" style="-fx-border-color: black transparent;">
+            <GridPane layoutY="50.0" prefHeight="401.0" prefWidth="674.0" style="-fx-border-color: black transparent;" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="50.0">
               <columnConstraints>
-                <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
-                <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                <ColumnConstraints hgrow="ALWAYS" minWidth="10.0" prefWidth="100.0" />
+                  <ColumnConstraints hgrow="ALWAYS" minWidth="10.0" prefWidth="100.0" />
               </columnConstraints>
               <rowConstraints>
-                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="ALWAYS" />
               </rowConstraints>
                <children>
                   <GridPane style="-fx-padding: 10; -fx-border-color: transparent black transparent transparent;">
@@ -45,29 +35,26 @@
                       <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
                     </columnConstraints>
                     <rowConstraints>
-                      <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
-                      <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                      <RowConstraints maxHeight="219.00001017252603" minHeight="10.0" prefHeight="219.00001017252603" vgrow="SOMETIMES" />
+                      <RowConstraints maxHeight="146.33333841959637" minHeight="10.0" prefHeight="105.66666666666669" vgrow="SOMETIMES" />
+                        <RowConstraints maxHeight="177.33334350585938" minHeight="10.0" prefHeight="53.666666666666686" vgrow="SOMETIMES" />
                     </rowConstraints>
                      <children>
-                        <GridPane prefHeight="111.0" prefWidth="248.0" GridPane.rowIndex="1">
+                        <GridPane prefHeight="185.0" prefWidth="214.0" GridPane.rowIndex="1">
                            <columnConstraints>
-                              <ColumnConstraints hgrow="SOMETIMES" maxWidth="162.33334350585938" minWidth="10.0" prefWidth="157.66668701171875" />
-                              <ColumnConstraints hgrow="SOMETIMES" maxWidth="112.33331298828125" minWidth="10.0" prefWidth="61.66668701171875" />
-                              <ColumnConstraints hgrow="SOMETIMES" maxWidth="98.3333740234375" minWidth="10.0" prefWidth="56.33331298828125" />
+                              <ColumnConstraints hgrow="ALWAYS" maxWidth="162.33334350585938" minWidth="10.0" prefWidth="157.66668701171875" />
+                              <ColumnConstraints hgrow="ALWAYS" maxWidth="112.33331298828125" minWidth="10.0" prefWidth="61.66668701171875" />
+                              <ColumnConstraints hgrow="ALWAYS" maxWidth="98.3333740234375" minWidth="10.0" prefWidth="56.33331298828125" />
                            </columnConstraints>
                            <rowConstraints>
-                              <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
-                              <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
-                              <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
-                              <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
-                              <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
-                              <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
-                              <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
-                              <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
-                              <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                              <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="ALWAYS" />
+                              <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="ALWAYS" />
+                              <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="ALWAYS" />
+                              <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="ALWAYS" />
+                              <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="ALWAYS" />
                            </rowConstraints>
                            <children>
-                              <Label text="Peralatan kantor" GridPane.rowIndex="1">
+                              <Label text="Tanah" GridPane.rowIndex="1">
                                  <font>
                                     <Font size="10.0" />
                                  </font>
@@ -75,7 +62,7 @@
                                     <Insets left="20.0" />
                                  </GridPane.margin>
                               </Label>
-                              <Label text="Akun Penyusutan Peralatan" GridPane.rowIndex="2">
+                              <Label text="Bangunan" GridPane.rowIndex="2">
                                  <font>
                                     <Font size="10.0" />
                                  </font>
@@ -83,28 +70,12 @@
                                     <Insets left="20.0" />
                                  </GridPane.margin>
                               </Label>
-                              <Label text="Kendaraan" GridPane.rowIndex="3">
-                                 <font>
-                                    <Font size="10.0" />
-                                 </font>
-                                 <GridPane.margin>
-                                    <Insets left="20.0" />
-                                 </GridPane.margin>
-                              </Label>
-                              <Label text="Akun Penyusutan Kendaraan" GridPane.rowIndex="4">
-                                 <font>
-                                    <Font size="10.0" />
-                                 </font>
-                                 <GridPane.margin>
-                                    <Insets left="20.0" />
-                                 </GridPane.margin>
-                              </Label>
-                              <Label style="-fx-border-color: transparent transparent black transparent;" text="Aktifa Tetap">
+                              <Label style="-fx-border-color: transparent transparent black transparent;" text="Aktiva Tetap">
                                  <font>
                                     <Font name="System Bold" size="10.0" />
                                  </font>
                               </Label>
-                              <Label text="Total Aktifa Tetap" GridPane.rowIndex="6">
+                              <Label text="Total Aktifa Tetap" GridPane.rowIndex="4">
                                  <font>
                                     <Font name="System Bold" size="10.0" />
                                  </font>
@@ -112,42 +83,17 @@
                                     <Insets left="20.0" />
                                  </GridPane.margin>
                               </Label>
-                              <Label fx:id="at_122" text="0" GridPane.columnIndex="1" GridPane.rowIndex="1">
+                              <Label fx:id="at_121" text="0" GridPane.columnIndex="1" GridPane.rowIndex="1">
                                  <font>
                                     <Font size="10.0" />
                                  </font>
                               </Label>
-                              <Label fx:id="at_620" text="0" GridPane.columnIndex="1" GridPane.rowIndex="2">
+                              <Label fx:id="at_124" text="0" GridPane.columnIndex="1" GridPane.rowIndex="2">
                                  <font>
                                     <Font size="10.0" />
                                  </font>
                               </Label>
-                              <Label fx:id="at_600" text="0" GridPane.columnIndex="1" GridPane.rowIndex="3">
-                                 <font>
-                                    <Font size="10.0" />
-                                 </font>
-                              </Label>
-                              <Label fx:id="at_123" text="0" GridPane.columnIndex="1" GridPane.rowIndex="4">
-                                 <font>
-                                    <Font size="10.0" />
-                                 </font>
-                              </Label>
-                              <Line endX="-56.70708084106445" endY="1.8576780348666944E-5" startX="-100.0" GridPane.columnIndex="1" GridPane.rowIndex="5" />
-                              <Label fx:id="at_total" text="0" textAlignment="RIGHT" GridPane.columnIndex="2" GridPane.rowIndex="6">
-                                 <font>
-                                    <Font name="System Bold" size="10.0" />
-                                 </font>
-                              </Label>
-                              <Label layoutX="30.0" layoutY="119.0" text="TOTAL ASSET" GridPane.rowIndex="8">
-                                 <font>
-                                    <Font name="System Bold" size="10.0" />
-                                 </font>
-                                 <GridPane.margin>
-                                    <Insets left="20.0" />
-                                 </GridPane.margin>
-                              </Label>
-                              <Line endX="-60.040435791015625" endY="3.31799196828797E-6" layoutX="267.0" layoutY="109.0" startX="-100.0" GridPane.columnIndex="2" GridPane.rowIndex="7" />
-                              <Label fx:id="total_asset" layoutX="226.0" layoutY="105.0" text="0" textAlignment="RIGHT" GridPane.columnIndex="2" GridPane.rowIndex="8">
+                              <Label fx:id="at_total" text="0" textAlignment="RIGHT" GridPane.columnIndex="2" GridPane.rowIndex="4">
                                  <font>
                                     <Font name="System Bold" size="10.0" />
                                  </font>
@@ -156,20 +102,21 @@
                         </GridPane>
                         <GridPane prefHeight="208.0" prefWidth="143.0">
                           <columnConstraints>
-                            <ColumnConstraints hgrow="SOMETIMES" maxWidth="162.33334350585938" minWidth="10.0" prefWidth="157.66668701171875" />
-                              <ColumnConstraints hgrow="SOMETIMES" maxWidth="112.33331298828125" minWidth="10.0" prefWidth="63.0" />
-                            <ColumnConstraints hgrow="SOMETIMES" maxWidth="98.3333740234375" minWidth="10.0" prefWidth="49.666666666666686" />
+                            <ColumnConstraints hgrow="ALWAYS" maxWidth="162.33334350585938" minWidth="10.0" prefWidth="157.66668701171875" />
+                              <ColumnConstraints hgrow="ALWAYS" maxWidth="112.33331298828125" minWidth="10.0" prefWidth="63.0" />
+                            <ColumnConstraints hgrow="ALWAYS" maxWidth="98.3333740234375" minWidth="10.0" prefWidth="49.666666666666686" />
                           </columnConstraints>
                           <rowConstraints>
-                              <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
-                            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
-                            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
-                              <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
-                              <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
-                              <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
-                            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
-                              <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
-                              <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                              <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="ALWAYS" />
+                            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="ALWAYS" />
+                            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="ALWAYS" />
+                              <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="ALWAYS" />
+                              <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="ALWAYS" />
+                              <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="ALWAYS" />
+                            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="ALWAYS" />
+                              <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="ALWAYS" />
+                              <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="ALWAYS" />
+                              <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="ALWAYS" />
                           </rowConstraints>
                            <children>
                               <Label text="Kas" GridPane.rowIndex="1">
@@ -180,7 +127,7 @@
                                     <Insets left="20.0" />
                                  </GridPane.margin>
                               </Label>
-                              <Label text="Bank" GridPane.rowIndex="2">
+                              <Label text="Perlengkapan" GridPane.rowIndex="2">
                                  <font>
                                     <Font size="10.0" />
                                  </font>
@@ -188,7 +135,7 @@
                                     <Insets left="20.0" />
                                  </GridPane.margin>
                               </Label>
-                              <Label text="Piutang Usaha" GridPane.rowIndex="3">
+                              <Label text="Peralatan" GridPane.rowIndex="3">
                                  <font>
                                     <Font size="10.0" />
                                  </font>
@@ -196,7 +143,7 @@
                                     <Insets left="20.0" />
                                  </GridPane.margin>
                               </Label>
-                              <Label text="PPN Masukkan" GridPane.rowIndex="4">
+                              <Label text="Persediaan Bahan Baku" GridPane.rowIndex="4">
                                  <font>
                                     <Font size="10.0" />
                                  </font>
@@ -204,7 +151,7 @@
                                     <Insets left="20.0" />
                                  </GridPane.margin>
                               </Label>
-                              <Label text="Persediaan Barang Dagang" GridPane.rowIndex="5">
+                              <Label text="Persediaan Bahan Baku Dagang" GridPane.rowIndex="5">
                                  <font>
                                     <Font size="10.0" />
                                  </font>
@@ -212,7 +159,7 @@
                                     <Insets left="20.0" />
                                  </GridPane.margin>
                               </Label>
-                              <Label text="Perlengkapan kantor" GridPane.rowIndex="6">
+                              <Label text="Piutang Usaha" GridPane.rowIndex="6">
                                  <font>
                                     <Font size="10.0" />
                                  </font>
@@ -220,12 +167,12 @@
                                     <Insets left="20.0" />
                                  </GridPane.margin>
                               </Label>
-                              <Label style="-fx-border-color: transparent transparent black transparent;" text="Aktifa Lancar">
+                              <Label style="-fx-border-color: transparent transparent black transparent;" text="Aktiva Lancar">
                                  <font>
                                     <Font name="System Bold" size="10.0" />
                                  </font>
                               </Label>
-                              <Label text="Total Aktifa Lancar" GridPane.rowIndex="8">
+                              <Label text="Total Aktifa Lancar" GridPane.rowIndex="9">
                                  <font>
                                     <Font name="System Bold" size="10.0" />
                                  </font>
@@ -238,17 +185,17 @@
                                     <Font size="10.0" />
                                  </font>
                               </Label>
-                              <Label fx:id="al_212" text="0" GridPane.columnIndex="1" GridPane.rowIndex="2">
+                              <Label fx:id="al_113" text="0" GridPane.columnIndex="1" GridPane.rowIndex="2">
                                  <font>
                                     <Font size="10.0" />
                                  </font>
                               </Label>
-                              <Label fx:id="al_211" text="0" GridPane.columnIndex="1" GridPane.rowIndex="3">
+                              <Label fx:id="al_122" text="0" GridPane.columnIndex="1" GridPane.rowIndex="3">
                                  <font>
                                     <Font size="10.0" />
                                  </font>
                               </Label>
-                              <Label fx:id="al_800" text="0" GridPane.columnIndex="1" GridPane.rowIndex="4">
+                              <Label fx:id="al_114" text="0" GridPane.columnIndex="1" GridPane.rowIndex="4">
                                  <font>
                                     <Font size="10.0" />
                                  </font>
@@ -258,100 +205,168 @@
                                     <Font size="10.0" />
                                  </font>
                               </Label>
-                              <Label fx:id="al_113" text="0" GridPane.columnIndex="1" GridPane.rowIndex="6">
+                              <Label fx:id="al_103" text="0" GridPane.columnIndex="1" GridPane.rowIndex="6">
                                  <font>
                                     <Font size="10.0" />
                                  </font>
                               </Label>
-                              <Line endX="-49.3737678527832" endY="7.748603820800781E-7" startX="-100.0" GridPane.columnIndex="1" GridPane.rowIndex="7" />
-                              <Label fx:id="al_total" text="0" textAlignment="CENTER" GridPane.columnIndex="2" GridPane.rowIndex="8">
+                              <Line endX="-31.04044532775879" endY="5.861123554495862E-6" startX="-100.0" GridPane.columnIndex="1" GridPane.rowIndex="8" />
+                              <Label fx:id="al_total" text="0" textAlignment="CENTER" GridPane.columnIndex="2" GridPane.rowIndex="9">
                                  <font>
                                     <Font name="System Bold" size="10.0" />
                                  </font>
                               </Label>
+                              <Label text="Sewa Bayar Dimuka" GridPane.rowIndex="7">
+                                 <font>
+                                    <Font size="10.0" />
+                                 </font>
+                                 <GridPane.margin>
+                                    <Insets left="20.0" />
+                                 </GridPane.margin>
+                              </Label>
+                              <Label fx:id="al_108" text="0" GridPane.columnIndex="1" GridPane.rowIndex="7">
+                                 <font>
+                                    <Font size="10.0" />
+                                 </font></Label>
                            </children>
                         </GridPane>
-                     </children>
-                  </GridPane>
-                  <GridPane style="-fx-padding: 10;" GridPane.columnIndex="1">
-                    <columnConstraints>
-                      <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
-                    </columnConstraints>
-                    <rowConstraints>
-                      <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
-                      <RowConstraints maxHeight="176.9999542236328" minHeight="10.0" prefHeight="176.3333282470703" vgrow="SOMETIMES" />
-                    </rowConstraints>
-                     <children>
-                        <GridPane>
+                        <GridPane GridPane.rowIndex="2">
                           <columnConstraints>
                             <ColumnConstraints hgrow="SOMETIMES" maxWidth="163.33332061767578" minWidth="10.0" prefWidth="160.00000762939453" />
                             <ColumnConstraints hgrow="SOMETIMES" maxWidth="133.33328247070312" minWidth="10.0" prefWidth="68.33333333333334" />
                               <ColumnConstraints hgrow="SOMETIMES" maxWidth="94.66668701171875" minWidth="10.0" prefWidth="62.333333333333314" />
                           </columnConstraints>
                           <rowConstraints>
-                            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
-                            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
-                            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
                               <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
                               <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
                           </rowConstraints>
                            <children>
-                              <Label style="-fx-border-color: transparent transparent black transparent;" text="Kewajiban Jangka Pendek">
+                              <Label text="TOTAL ASSET" GridPane.rowIndex="1">
+                                 <font>
+                                    <Font name="System Bold" size="10.0" />
+                                 </font>
+                                 <GridPane.margin>
+                                    <Insets left="20.0" />
+                                 </GridPane.margin>
+                              </Label>
+                              <Label fx:id="total_asset" text="0" textAlignment="RIGHT" GridPane.columnIndex="2" GridPane.rowIndex="1">
                                  <font>
                                     <Font name="System Bold" size="10.0" />
                                  </font>
                               </Label>
-                              <Label layoutX="10.0" layoutY="15.0" style="-fx-label-padding: 0 0 0 10;" text="Hutang Usaha" GridPane.rowIndex="1">
-                                 <font>
-                                    <Font size="10.0" />
-                                 </font>
-                              </Label>
-                              <Label layoutX="10.0" layoutY="42.0" style="-fx-label-padding: 0 0 0 10;" text="PPN Keluaran" GridPane.rowIndex="2">
-                                 <font>
-                                    <Font size="10.0" />
-                                 </font>
-                              </Label>
-                              <Label layoutX="10.0" layoutY="69.0" style="-fx-label-padding: 0 0 0 10;" text="T. Kewajiban Jangka Pendek" GridPane.rowIndex="4">
+                              <Line endX="-56.70708084106445" endY="1.8576780348666944E-5" startX="-100.0" GridPane.columnIndex="2" />
+                           </children>
+                        </GridPane>
+                     </children>
+                  </GridPane>
+                  <GridPane style="-fx-border-color: transparent black transparent transparent;" GridPane.columnIndex="1">
+                    <columnConstraints>
+                      <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                    </columnConstraints>
+                    <rowConstraints>
+                      <RowConstraints maxHeight="133.33335113525388" minHeight="10.0" prefHeight="83.66666666666666" vgrow="SOMETIMES" />
+                      <RowConstraints maxHeight="252.9999923706055" minHeight="10.0" prefHeight="119.66666666666667" vgrow="SOMETIMES" />
+                        <RowConstraints maxHeight="253.3333282470703" minHeight="10.0" prefHeight="100.99998982747394" vgrow="SOMETIMES" />
+                        <RowConstraints maxHeight="253.3333282470703" minHeight="10.0" prefHeight="100.99998982747394" vgrow="SOMETIMES" />
+                    </rowConstraints>
+                     <children>
+                        <GridPane>
+                           <columnConstraints>
+                              <ColumnConstraints hgrow="ALWAYS" maxWidth="163.33332061767578" minWidth="10.0" prefWidth="160.00000762939453" />
+                              <ColumnConstraints hgrow="ALWAYS" maxWidth="133.33328247070312" minWidth="10.0" prefWidth="68.33333333333334" />
+                              <ColumnConstraints hgrow="ALWAYS" maxWidth="94.66668701171875" minWidth="10.0" prefWidth="62.333333333333314" />
+                           </columnConstraints>
+                           <rowConstraints>
+                              <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="ALWAYS" />
+                              <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="ALWAYS" />
+                              <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="ALWAYS" />
+                              <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="ALWAYS" />
+                           </rowConstraints>
+                           <children>
+                              <Label style="-fx-border-color: transparent transparent black transparent;" text="Utang Jangka Pendek">
                                  <font>
                                     <Font name="System Bold" size="10.0" />
                                  </font>
                               </Label>
-                              <Label fx:id="kjp_621" text="0" GridPane.columnIndex="1" GridPane.rowIndex="1">
+                              <Label layoutX="10.0" layoutY="15.0" style="-fx-label-padding: 0 0 0 10;" text="Utang Usaha" GridPane.rowIndex="1">
                                  <font>
                                     <Font size="10.0" />
                                  </font>
                               </Label>
-                              <Label fx:id="kjp_610" layoutX="171.0" layoutY="43.0" text="0" GridPane.columnIndex="1" GridPane.rowIndex="2">
+                              <Label layoutX="10.0" layoutY="69.0" style="-fx-label-padding: 0 0 0 10;" text="T. Jangka Pendek" GridPane.rowIndex="3">
+                                 <font>
+                                    <Font name="System Bold" size="10.0" />
+                                 </font>
+                              </Label>
+                              <Label fx:id="utpn_211" text="0" GridPane.columnIndex="1" GridPane.rowIndex="1">
                                  <font>
                                     <Font size="10.0" />
                                  </font>
                               </Label>
-                              <Line endX="-49.3737678527832" endY="7.748603820800781E-7" startX="-100.0" GridPane.columnIndex="1" GridPane.rowIndex="3" />
-                              <Label fx:id="kjp_total" text="0" textAlignment="CENTER" GridPane.columnIndex="2" GridPane.rowIndex="4">
+                              <Line endX="-49.3737678527832" endY="7.748603820800781E-7" startX="-100.0" GridPane.columnIndex="1" GridPane.rowIndex="2" />
+                              <Label fx:id="utpn_total" text="0" textAlignment="CENTER" GridPane.columnIndex="2" GridPane.rowIndex="3">
                                  <font>
                                     <Font name="System Bold" size="10.0" />
                                  </font>
                               </Label>
                            </children>
                         </GridPane>
-                        <GridPane layoutX="10.0" layoutY="10.0" GridPane.rowIndex="1">
+                        <GridPane GridPane.rowIndex="1">
                            <columnConstraints>
-                              <ColumnConstraints hgrow="SOMETIMES" maxWidth="163.33332061767578" minWidth="10.0" prefWidth="160.00000762939453" />
-                              <ColumnConstraints hgrow="SOMETIMES" maxWidth="133.33328247070312" minWidth="10.0" prefWidth="73.33332570393881" />
-                              <ColumnConstraints hgrow="SOMETIMES" maxWidth="94.66668701171875" minWidth="10.0" prefWidth="66.66671752929688" />
+                              <ColumnConstraints hgrow="ALWAYS" maxWidth="163.33332061767578" minWidth="10.0" prefWidth="160.00000762939453" />
+                              <ColumnConstraints hgrow="ALWAYS" maxWidth="133.33328247070312" minWidth="10.0" prefWidth="68.33333333333334" />
+                              <ColumnConstraints hgrow="ALWAYS" maxWidth="94.66668701171875" minWidth="10.0" prefWidth="62.333333333333314" />
                            </columnConstraints>
                            <rowConstraints>
-                              <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
-                              <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
-                              <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
-                              <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
-                              <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
-                              <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
-                              <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
-                              <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                              <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="ALWAYS" />
+                              <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="ALWAYS" />
+                              <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="ALWAYS" />
+                              <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="ALWAYS" />
                            </rowConstraints>
                            <children>
-                              <Label style="-fx-border-color: transparent transparent black transparent;" text="Ekuitas">
+                              <Label style="-fx-border-color: transparent transparent black transparent;" text="Utang Jangka Panjang">
+                                 <font>
+                                    <Font name="System Bold" size="10.0" />
+                                 </font>
+                              </Label>
+                              <Label layoutX="10.0" layoutY="15.0" style="-fx-label-padding: 0 0 0 10;" text="Utang Bank" GridPane.rowIndex="1">
+                                 <font>
+                                    <Font size="10.0" />
+                                 </font>
+                              </Label>
+                              <Label layoutX="10.0" layoutY="69.0" style="-fx-label-padding: 0 0 0 10;" text="T. Utang Jangka Panjang" GridPane.rowIndex="3">
+                                 <font>
+                                    <Font name="System Bold" size="10.0" />
+                                 </font>
+                              </Label>
+                              <Label fx:id="utpj_212" text="0" GridPane.columnIndex="1" GridPane.rowIndex="1">
+                                 <font>
+                                    <Font size="10.0" />
+                                 </font>
+                              </Label>
+                              <Line endX="-49.3737678527832" endY="7.748603820800781E-7" startX="-100.0" GridPane.columnIndex="1" GridPane.rowIndex="2" />
+                              <Label fx:id="utpj_total" text="0" textAlignment="CENTER" GridPane.columnIndex="2" GridPane.rowIndex="3">
+                                 <font>
+                                    <Font name="System Bold" size="10.0" />
+                                 </font>
+                              </Label>
+                           </children>
+                        </GridPane>
+                        <GridPane GridPane.rowIndex="2">
+                           <columnConstraints>
+                              <ColumnConstraints hgrow="ALWAYS" maxWidth="163.33332061767578" minWidth="10.0" prefWidth="160.00000762939453" />
+                              <ColumnConstraints hgrow="ALWAYS" maxWidth="133.33328247070312" minWidth="10.0" prefWidth="68.33333333333334" />
+                              <ColumnConstraints hgrow="ALWAYS" maxWidth="94.66668701171875" minWidth="10.0" prefWidth="62.333333333333314" />
+                           </columnConstraints>
+                           <rowConstraints>
+                              <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="ALWAYS" />
+                              <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="ALWAYS" />
+                              <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="ALWAYS" />
+                              <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="ALWAYS" />
+                              <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="ALWAYS" />
+                           </rowConstraints>
+                           <children>
+                              <Label style="-fx-border-color: transparent transparent black transparent;" text="Modal">
                                  <font>
                                     <Font name="System Bold" size="10.0" />
                                  </font>
@@ -361,68 +376,87 @@
                                     <Font size="10.0" />
                                  </font>
                               </Label>
-                              <Label layoutX="10.0" layoutY="42.0" style="-fx-label-padding: 0 0 0 10;" text="Laba ditahan" GridPane.rowIndex="2">
+                              <Label layoutX="10.0" layoutY="42.0" style="-fx-label-padding: 0 0 0 10;" text="Prive" GridPane.rowIndex="2">
                                  <font>
                                     <Font size="10.0" />
                                  </font>
                               </Label>
-                              <Label layoutX="10.0" layoutY="69.0" style="-fx-label-padding: 0 0 0 10;" text="Total Ekuitas" GridPane.rowIndex="5">
+                              <Label layoutX="10.0" layoutY="69.0" style="-fx-label-padding: 0 0 0 10;" text="T. Modal" GridPane.rowIndex="4">
                                  <font>
                                     <Font name="System Bold" size="10.0" />
                                  </font>
                               </Label>
-                              <Label fx:id="e_300" text="0" GridPane.columnIndex="1" GridPane.rowIndex="1">
+                              <Label fx:id="m_300" text="0" GridPane.columnIndex="1" GridPane.rowIndex="1">
                                  <font>
                                     <Font size="10.0" />
                                  </font>
                               </Label>
-                              <Label fx:id="e_401" layoutX="171.0" layoutY="43.0" text="0" GridPane.columnIndex="1" GridPane.rowIndex="2">
+                              <Label fx:id="m_312" layoutX="171.0" layoutY="43.0" text="0" GridPane.columnIndex="1" GridPane.rowIndex="2">
                                  <font>
                                     <Font size="10.0" />
                                  </font>
                               </Label>
-                              <Line endX="-49.3737678527832" endY="7.748603820800781E-7" startX="-100.0" GridPane.columnIndex="1" GridPane.rowIndex="4" />
-                              <Label fx:id="e_total" text="0" textAlignment="CENTER" GridPane.columnIndex="2" GridPane.rowIndex="5">
+                              <Line endX="-49.3737678527832" endY="7.748603820800781E-7" startX="-100.0" GridPane.columnIndex="1" GridPane.rowIndex="3" />
+                              <Label fx:id="m_total" text="0" textAlignment="CENTER" GridPane.columnIndex="2" GridPane.rowIndex="4">
                                  <font>
                                     <Font name="System Bold" size="10.0" />
                                  </font>
                               </Label>
-                              <Label layoutX="10.0" layoutY="47.0" style="-fx-label-padding: 0 0 0 10;" text="Laba Tahun Berjalan" GridPane.rowIndex="3">
+                           </children>
+                        </GridPane>
+                        <GridPane GridPane.rowIndex="3">
+                           <columnConstraints>
+                              <ColumnConstraints hgrow="ALWAYS" maxWidth="163.33332061767578" minWidth="10.0" prefWidth="160.00000762939453" />
+                              <ColumnConstraints hgrow="ALWAYS" maxWidth="133.33328247070312" minWidth="10.0" prefWidth="68.33333333333334" />
+                              <ColumnConstraints hgrow="ALWAYS" maxWidth="94.66668701171875" minWidth="10.0" prefWidth="62.333333333333314" />
+                           </columnConstraints>
+                           <rowConstraints>
+                              <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                              <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                           </rowConstraints>
+                           <children>
+                              <Label text="TOTAL LIABILITIES &amp; EQUITY" GridPane.rowIndex="1">
                                  <font>
-                                    <Font size="10.0" />
+                                    <Font name="System Bold" size="10.0" />
                                  </font>
+                                 <GridPane.margin>
+                                    <Insets left="20.0" />
+                                 </GridPane.margin>
                               </Label>
-                              <Label fx:id="e_400" layoutX="171.0" layoutY="47.0" text="0" GridPane.columnIndex="1" GridPane.rowIndex="3">
-                                 <font>
-                                    <Font size="10.0" />
-                                 </font>
-                              </Label>
-                              <Label layoutX="10.0" layoutY="145.0" style="-fx-label-padding: 0 0 0 10;" text="Total Liabilities &amp; Equity" GridPane.rowIndex="7">
+                              <Label fx:id="total_le" text="0" textAlignment="RIGHT" GridPane.columnIndex="2" GridPane.rowIndex="1">
                                  <font>
                                     <Font name="System Bold" size="10.0" />
                                  </font>
                               </Label>
-                              <Label fx:id="total_le" layoutX="244.0" layoutY="145.0" text="0" textAlignment="CENTER" GridPane.columnIndex="2" GridPane.rowIndex="7">
-                                 <font>
-                                    <Font name="System Bold" size="10.0" />
-                                 </font>
-                              </Label>
-                              <Line endX="-49.3737678527832" endY="7.748603820800781E-7" layoutX="271.0" layoutY="127.0" startX="-100.0" GridPane.columnIndex="2" GridPane.rowIndex="6" />
+                              <Line endX="-56.70708084106445" endY="1.8576780348666944E-5" startX="-100.0" GridPane.columnIndex="2" />
                            </children>
                         </GridPane>
                      </children>
                   </GridPane>
                </children>
             </GridPane>
-            <Label fx:id="filterTahun" alignment="CENTER" layoutX="271.0" layoutY="30.0" prefHeight="15.0" prefWidth="73.0" text="2024">
+            <Label fx:id="filterTahun" alignment="CENTER" layoutX="274.0" layoutY="30.0" prefHeight="15.0" prefWidth="73.0" text="2024" AnchorPane.leftAnchor="274.0" AnchorPane.rightAnchor="274.0">
                <font>
                   <Font name="System Bold" size="10.0" />
                </font>
             </Label>
-            <Label fx:id="namaPerusahaan" alignment="CENTER" layoutX="221.0" layoutY="1.0" prefHeight="17.0" prefWidth="171.0" styleClass="centerLabel" stylesheets="@global.css" />
+            <Label fx:id="namaPerusahaan" alignment="CENTER" layoutX="276.0" layoutY="-2.0" prefHeight="17.0" prefWidth="171.0" styleClass="centerLabel" stylesheets="@global.css" AnchorPane.leftAnchor="276.0" AnchorPane.rightAnchor="275.3333333333333">
+               <font>
+                  <Font size="14.0" />
+               </font></Label>
+            <Label layoutX="530.0" layoutY="29.0" text="LIABILITIES &amp; EQUITY" AnchorPane.rightAnchor="20.66666666666667">
+               <font>
+                  <Font name="System Bold" size="12.0" />
+               </font>
+            </Label>
+            <Label alignment="CENTER" layoutX="274.0" layoutY="16.0" prefHeight="15.0" prefWidth="73.0" text="NERACA" AnchorPane.leftAnchor="274.0" AnchorPane.rightAnchor="274.0">
+               <font>
+                  <Font name="System Bold" size="12.0" />
+               </font>
+            </Label>
          </children>
       </AnchorPane>
       <ComboBox fx:id="tahun" layoutX="190.0" layoutY="18.0" onAction="#select" prefHeight="1.0" prefWidth="73.0" />
-      <Button layoutX="275.0" layoutY="18.0" mnemonicParsing="false" onAction="#handleDownload" text="Download" />
+      <Button layoutX="275.0" layoutY="18.0" mnemonicParsing="false" onAction="#handleDownload" text="Print" />
    </children>
 </AnchorPane>

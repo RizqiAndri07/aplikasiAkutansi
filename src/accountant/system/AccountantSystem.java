@@ -32,11 +32,12 @@ public class AccountantSystem extends Application {
         } else {
             root = FXMLLoader.load(getClass().getResource("Login.fxml"));
         }
-
+        
         Scene scene = new Scene(root);
 
         stage.setScene(scene);
         stage.show();
+        
     }
 
     /**
